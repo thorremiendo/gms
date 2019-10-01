@@ -19,9 +19,9 @@ Route::get('/strands', 'StrandsController@index');
 Route::get('/strands/add', 'StrandsController@create');
 Route::post('/strands/store', 'StrandsController@store');
 
-Route::get('/teachers', 'StrandsController@index');
-Route::get('/teachers/add', 'StrandsController@create');
-Route::post('/teachers/store', 'StrandsController@store');
+Route::get('/teachers', 'TeachersController@index');
+Route::get('/teachers/add', 'TeachersController@create');
+Route::post('/teachers/store', 'TeachersController@store');
 
 Route::get('/sections', 'SectionsController@index');
 Route::get('/sections/add', 'SectionsController@create');

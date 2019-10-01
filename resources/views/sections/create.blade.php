@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         @include('layouts.errors')
-        <form method="POST" action="/subjects/store">
+        <form method="POST" action="/sections/store">
             @csrf
           <div class="form-group">
             <label for="title">Name</label>
@@ -11,7 +11,7 @@
            <div class="form-group">
             <label for="title">Active</label>
             <input type="text" class="form-control" name='is_active' aria-describedby="emailHelp" placeholder="Active">
-          </div>
+        </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

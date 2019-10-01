@@ -27,6 +27,7 @@ class SectionsController extends Controller
         
     	$section = new Section;
     	$section->name = request()->name;
+        $section->is_active = request()->is_active;
     	$section->save();
 
     	return redirect('/sections');
