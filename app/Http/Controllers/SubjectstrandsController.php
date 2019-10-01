@@ -20,14 +20,21 @@ class SubjectstrandsController extends Controller
      public function store()
     {
         request()->validate([
-            'name' => 'required',
-            'is_active' => 'required',
+            'subject_id' => 'required',
+            'strand_id' => 'required',
+            'semester' => 'required',
+            'grade_level' => 'required',
+
+         
             
         ]);
         
     	$subjectstrand = new Subjectstrand;
-    	$subjectstrand->name = request()->name;
-        $subjectstrand->is_active = request()->is_active;
+    	$subjectstrand->subject_id = request()->subject_id;
+        $subjectstrand->strand_id = request()->strand_id;
+        $subjectstrand->semester = request()->semester;
+        $subjectstrand->grade_level = request()->grade_level;
+        
     	$subjectstrand->save();
 
     	return redirect('/subject-strands');

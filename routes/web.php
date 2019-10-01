@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/subjects', 'SubjectsController@index');
 Route::get('/subjects/add', 'SubjectsController@create');
 Route::post('/subjects/store', 'SubjectsController@store');
