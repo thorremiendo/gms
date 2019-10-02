@@ -35,7 +35,7 @@ class TeachersController extends Controller
    
     public function edit(Teacher $teacher)
     {
-        return view('teachers.edit')->with('teacher', $teachers);
+        return view('teachers.edit')->with('teacher', $teacher);
     }
 
     public function update(Teacher $teacher)

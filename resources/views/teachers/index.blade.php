@@ -16,6 +16,8 @@
                         <td>{{ $teacher->id }}</td>
                         <td>{{ $teacher->name }}</td>
                         <td>{{ $teacher->advisory_section }}</td>
+                        <td><a href="/teachers/{{ $teacher->id }}/edit">Edit</a></td>
+
                     </tr>
                 @endforeach
             </tbody>

@@ -31,10 +31,11 @@ class SubjectsController extends Controller
     	return redirect('/subjects');
     }
     
-   
+
+    
     public function edit(Subject $subject)
     {
-        return view('subjects.edit')->with('subject', $subjects);
+        return view('subjects.edit')->with('subject', $subject);
     }
 
     public function update(Subject $subject)

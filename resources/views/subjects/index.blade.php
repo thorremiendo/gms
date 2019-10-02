@@ -14,7 +14,7 @@
                     <tr>
                         <td>{{ $subject->id }}</td>
                         <td>{{ $subject->name }}</td>
-                        
+                        <td><a href="/subjects/{{ $subject->id }}/edit">Edit</a></td>
                     </tr>
                 @endforeach
             </tbody>

@@ -36,7 +36,7 @@ class SectionsController extends Controller
    
     public function edit(Section $section)
     {
-        return view('sections.edit')->with('section', $sections);
+        return view('sections.edit')->with('section', $section);
     }
 
     public function update(Section $section)

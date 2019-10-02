@@ -16,6 +16,7 @@
                         <td>{{ $section->id }}</td>
                         <td>{{ $section->name }}</td>
                         <td>{{ $section->is_active }}</td>
+                        <td><a href="/sections/{{ $section->id }}/edit">Edit</a></td>
                         
                     </tr>
                 @endforeach
