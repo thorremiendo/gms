@@ -13,21 +13,22 @@
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">GMS</a>
+      <a class="navbar-brand" href="/subjects">GMS</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="/subjects">Home</a></li>
           <li><a href='/subjects'>Subjects</a></li>
           <li><a href="/strands">Strands</a></li>
           <li><a href="/teachers">Teachers</a></li>
           <li><a href="/sections">Sections</a></li>
           <li><a href="/subject-strands">Subject Strands</a></li>
+          <li><a href="/teacher-loads">Teacher Loads</a></li>
 
-        </ul>
-      </li>
-   
     </ul>
-   
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span>Log Out</a></li>
+    </ul>
+      </li>   
   </div>
 </nav>
     @yield('content')

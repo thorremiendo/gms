@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@authenticate');
+Route::get('/logout', 'LoginController@logout');
 
+
+
+Route::middleware('auth')->group(function() {
 Route::get('/subjects', 'SubjectsController@index');
 Route::get('/subjects/add', 'SubjectsController@create');
 Route::post('/subjects/store', 'SubjectsController@store');
@@ -22,13 +25,13 @@ Route::get('/subjects/{subject}', 'SubjectsController@show');
 Route::get('/subjects/{subject}/edit', 'SubjectsController@edit');
 Route::post('/subjects/{subject}/update', 'SubjectsController@update');
 
-
-
 Route::get('/strands', 'StrandsController@index');
 Route::get('/strands/add', 'StrandsController@create');
 Route::post('/strands/store', 'StrandsController@store');
 
-
+Route::get('/teacher-loads', 'TeacherLoadsController@index');
+Route::get('/teacher-loads/add', 'TeacherLoadsController@create');
+Route::post('/teacher-loads/store', 'TeacherLoadsController@store');
 
 Route::get('/teachers', 'TeachersController@index');
 Route::get('/teachers/add', 'TeachersController@create');
@@ -47,3 +50,4 @@ Route::post('/sections/{section}/update', 'SectionsController@update');
 Route::get('/subject-strands', 'SubjectstrandsController@index');
 Route::get('/subject-strands/add', 'SubjectstrandsController@create');
 Route::post('/subject-strands/store', 'SubjectstrandsController@store');
+});
