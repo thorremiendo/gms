@@ -9,12 +9,10 @@
             <input type="text" class="form-control" name='name' aria-describedby="emailHelp" placeholder="Name">
             <label for="sel1">Advisory Section</label>
             <select class="form-control" id="sel1" name='advisory_section'>
-              <option value="Section A">Section A</option>
-              <option value="Section B">Section B</option>
-              <option value="Section C">Section C</option>
-              <option value="Section D">Section D</option>
+              @foreach ($sections as $section)
+              <option value= '{{ $section->id }}'>{{ $section->name }}</option>
+              @endforeach
             </select>
-          </div>
          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
