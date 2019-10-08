@@ -16,13 +16,12 @@
       <a class="navbar-brand" href="/subjects">GMS</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/subjects">Home</a></li>
-          <li><a href='/subjects'>Subjects</a></li>
-          <li><a href="/strands">Strands</a></li>
-          <li><a href="/teachers">Teachers</a></li>
-          <li><a href="/sections">Sections</a></li>
-          <li><a href="/subject-strands">Subject Strands</a></li>
-          <li><a href="/teacher-loads">Teacher Loads</a></li>
+          <li class="{{ setActive('subjects') }}"><a href='/subjects'>Subjects</a></li>
+          <li class="{{ setActive('strands') }}" ><a href="/strands">Strands</a></li>
+          <li class="{{ setActive('teachers') }}"><a href="/teachers">Teachers</a></li>
+          <li class="{{ setActive('sections') }}"><a  href="/sections">Sections</a></li>
+          <li class="{{ setActive('subject-strands') }}"><a href="/subject-strands">Subject Strands</a></li>
+          <li class="{{ setActive('teacher-loads') }}"><a href="/teacher-loads">Teacher Loads</a></li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">

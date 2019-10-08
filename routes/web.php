@@ -15,8 +15,6 @@ Route::get('/', 'LoginController@login')->name('login');
 Route::post('/login', 'LoginController@authenticate');
 Route::get('/logout', 'LoginController@logout');
 
-
-
 Route::middleware('auth')->group(function() {
 Route::get('/subjects', 'SubjectsController@index');
 Route::get('/subjects/add', 'SubjectsController@create');
@@ -30,7 +28,6 @@ Route::get('/strands/add', 'StrandsController@create');
 Route::post('/strands/store', 'StrandsController@store');
 
 Route::get('/teacher-loads', 'TeacherLoadsController@index');
-Route::get('/teacher-loads/add', 'TeacherLoadsController@create');
 Route::post('/teacher-loads/store', 'TeacherLoadsController@store');
 
 Route::get('/teachers', 'TeachersController@index');

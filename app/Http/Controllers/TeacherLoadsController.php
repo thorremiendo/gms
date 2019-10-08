@@ -11,40 +11,39 @@ class TeacherLoadsController extends Controller
     public function index()
     {
     	$teacherloads = TeacherLoad::all();
-    	return view('teacherloads.index')->with('teacherloads', $teacherloads);
+    	return view('teacher-loads.index')->with('teacherloads', $teacherloads);
     }
     public function create()
     {
-    	return view('teacherloads.create');
+    	return view('teacher-loads.create');
     }
      public function store()
     {
         request()->validate([
-            'name' => 'required',
             'subject_strand_id' => 'required',
             'section_id' => 'required',
 
             
         ]);
         
-    	$teacher = new Teacher;
-    	$teacher->name = request()->name;
-    	$teacher->advisory_section = request()->advisory_section;
-    	$teacher->save();
+    	$teacherload = new TeacherLoad;
+    	$teacherload->subject_strand_id = request()->subject_strand_id;
+        $teacherload->section_id = request()->section_id;
+    	$teacherload->save();
 
     	return redirect('/teacher-loads');
     }
     
    
-    public function edit(Teacher $teacher)
+    public function edit(TeacherLoad $teacherload)
     {
-        return view('teacher-loads.edit')->with('teacher', $teacher);
+        return view('teacher-loads.edit')->with('teacherload', $teacherload);
     }
 
-    public function update(Teacher $teacher)
+    public function update(Teacherload $teacherload)
     {
-        $teacher->name = request()->name;
-        $teacher->save();
+        $teacherload->name = request()->name;
+        $teacherload->save();
         return redirect('/teacher-loads');
     }
 

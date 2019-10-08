@@ -10,7 +10,7 @@
             <label for="sel1">Advisory Section</label>
             <select class="form-control" id="sel1" name='advisory_section'>
               @foreach ($sections as $section)
-              <option value= '{{ $section->id }}'>{{ $section->name }}</option>
+              <option value= '{{ $section->name }}'>{{ $section->name }}</option>
               @endforeach
             </select>
          <button type="submit" class="btn btn-primary">Submit</button>
