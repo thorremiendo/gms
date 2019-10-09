@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Subjectstrand;
+use App\Subject;
+use App\Strand;
 
 
 class SubjectstrandsController extends Controller
@@ -15,7 +17,11 @@ class SubjectstrandsController extends Controller
     }
     public function create()
     {
-    	return view('subject-strands.create');
+        $subjects = Subject::all();
+        $strands = Strand::all();
+
+        return view('subject-strands.create',compact('subjects','strands'));
+    	
     }
      public function store()
     {

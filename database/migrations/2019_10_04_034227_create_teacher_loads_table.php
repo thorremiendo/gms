@@ -15,7 +15,7 @@ class CreateTeacherLoadsTable extends Migration
     {
         Schema::create('teacher_loads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('subject_strand_id');
+            $table->string('subject_id');
             $table->string('section_id');
             $table->timestamps();
 

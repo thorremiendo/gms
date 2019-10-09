@@ -5,7 +5,7 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Subject Strand</th>
+                    <th scope="col">Subject</th>
                     <th scope="col">Section</th>
                     
                 </tr>
@@ -14,9 +14,8 @@
                 @foreach($teacherloads as $teacherload)
                     <tr>
                         <td>{{ $teacherload->id }}</td>
-                        <td>{{ $teacherload->subject_strand_id }}</td>
+                        <td>{{ $teacherload->subject_id }}</td>
                         <td>{{ $teacherload->section_id }}</td> 
-
                         
                     </tr>
                 @endforeach
@@ -38,20 +37,26 @@
 
             <div class="modal-body mx-3">
                 <div class="form-group">
-                <div class="md-form mb-5">
-                  <i class="fas fa-user prefix grey-text"></i>
-                   <label data-error="wrong" data-success="right" for="orangeForm-name">Subject Strand</label>
-                  <input type="text" id="orangeForm-name" class="form-control validate" name="subject_strand_id">
-                 
+                  <div class="md-form mb-5">
+                    <label for="sel1">Subject</label>
+                    <select class="form-control" id="sel1" name='subject_id'>
+                      @foreach ($subjects as $subject)
+                      <option value= '{{ $subject->name }}'>{{ $subject->name }}</option>
+                      @endforeach
+                    </select>
+                  </div>
                 </div>
-                </div>
+
+
                 <div class="form-group">
                   <div class="md-form mb-5">
-                  <i class="fas fa-envelope prefix grey-text"></i>
-                  <label data-error="wrong" data-success="right" for="orangeForm-email">Section</label>
-                  <input type="text" id="orangeForm-email" class="form-control validate" name="section_id">
-                  
-                 </div>
+                    <label for="sel1">Section</label>
+                    <select class="form-control" id="sel1" name='section_id'>
+                      @foreach ($sections as $section)
+                      <option value= '{{ $section->name }}'>{{ $section->name }}</option>
+                      @endforeach
+                    </select>
+                  </div>
                 </div>
                 
             </div>
