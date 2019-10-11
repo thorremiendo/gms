@@ -14,7 +14,7 @@
                     <tr>
                         <td>{{ $strand->id }}</td>
                         <td>{{ $strand->name }}</td>
-                        
+                        <td><a href="/strands/{{ $strand->id }}/edit">Edit</a></td>
                     </tr>
                 @endforeach
             </tbody>

@@ -26,6 +26,8 @@ Route::post('/subjects/{subject}/update', 'SubjectsController@update');
 Route::get('/strands', 'StrandsController@index');
 Route::get('/strands/add', 'StrandsController@create');
 Route::post('/strands/store', 'StrandsController@store');
+Route::get('/strands/{strand}/edit', 'StrandsController@edit');
+Route::post('/strands/{strand}/update', 'StrandsController@update');
 
 Route::get('/teacher-loads', 'TeacherLoadsController@index');
 Route::post('/teacher-loads/store', 'TeacherLoadsController@store');

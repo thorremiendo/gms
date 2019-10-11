@@ -34,7 +34,7 @@ class StrandsController extends Controller
    
     public function edit(Strand $strand)
     {
-        return view('strands.edit')->with('strand', $strands);
+        return view('strands.edit')->with('strand', $strand);
     }
 
     public function update(Strand $strand)
